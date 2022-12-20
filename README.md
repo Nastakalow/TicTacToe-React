@@ -20,4 +20,4 @@ $ npm start
 
 ## :link: Demo
 
-- <a target="_blank" href="https://tictactoe-react-app-deploy.netlify.app/"> Click Here </a> to see and play by yourself a demo of the game.
+- <a target="_blank" href="https://tictactoereactappdeploy.netlify.app/"> Click Here </a> to see and play by yourself a demo of the game.
