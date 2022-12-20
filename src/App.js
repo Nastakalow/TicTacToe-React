@@ -48,7 +48,7 @@ export class App extends Component {
           this.state.values[a] == this.state.values[b] &&
           this.state.values[b] == this.state.values[c]
         ) {
-          const whoIsWin = `Winner is => ${this.state.values[a]}`;
+          const whoIsWin = `Winner is ➡ ${this.state.values[a]}`;
           this.setState((state) => ({
             whoIsWin,
           }));
