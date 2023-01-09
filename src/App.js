@@ -60,87 +60,17 @@ export class App extends Component {
       <>
         <h1 className="title">{this.state.whoIsWin}</h1>
         <div className="container">
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(0, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(1, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(2, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(3, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(4, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(5, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(6, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(7, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
-          <Cell
-            value={this.state.whoTurn ? "X" : "O"}
-            onClick={() => {
-              this.changeTurn();
-              const value = this.state.whoTurn ? "X" : "O";
-              this.writeValue(8, value);
-            }}
-            isGameEnd={this.state.whoIsWin}
-          />
+          {this.state.values.map((cell, index) => (
+            <Cell
+              value={this.state.whoTurn ? "X" : "O"}
+              onClick={() => {
+                this.changeTurn();
+                const value = this.state.whoTurn ? "X" : "O";
+                this.writeValue(index, value);
+              }}
+              isGameEnd={this.state.whoIsWin}
+            />
+          ))}
         </div>
       </>
     );
